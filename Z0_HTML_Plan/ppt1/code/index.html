@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HTML • CSS • JavaScript — Learn by Example</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-hero">
+    <div class="wrap">
+      <h1>HTML • CSS • JavaScript — Learn by Example</h1>
+      <p class="lead">Small examples and interactive demos inspired by the HTML/CSS/JS notes (see PDF). fileciteturn1file0</p>
+      <nav class="toc">
+        <a href="#html-fundamentals">HTML</a>
+        <a href="#css-fundamentals">CSS</a>
+        <a href="#js-fundamentals">JavaScript</a>
+        <a href="#examples">Examples</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap content">
+
+    <img src="cat.jpg"
+    alt="A cute cat"
+    width="300"/>
+
+    <section id="html-fundamentals" class="card">
+      <h2>HTML Fundamentals</h2>
+      <p>HTML provides structure — the <strong>skeleton</strong> of the page. Key concepts from the PDF: elements, tags, attributes, semantic elements, lists, images, links and forms. (See pages 2–14 in the PDF.) fileciteturn1file0</p>
+
+      <article>
+        <h3>Basic structure</h3>
+        <pre><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;&lt;!-- meta, title, links --&gt;&lt;/head&gt;
+  &lt;body&gt;&lt;!-- visible content --&gt;&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </article>
+
+      <article>
+        <h3>Common tags</h3>
+        <ul>
+          <li><code>&lt;h1&gt;…&lt;/h1&gt;</code> headings</li>
+          <li><code>&lt;p&gt;</code> paragraph</li>
+          <li><code>&lt;a href=""&gt;</code> links (use <code>target="_blank" rel="noopener"</code> for external)</li>
+          <li><code>&lt;img src="" alt=""&gt;</code> images (provide alt text)</li>
+          <li><code>&lt;ul&gt;/&lt;ol&gt; &lt;li&gt;</code> lists</li>
+          <li><code>&lt;form&gt;</code> inputs and controls</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="css-fundamentals" class="card">
+      <h2>CSS Fundamentals</h2>
+      <p>CSS controls presentation — colors, spacing, layout, and responsive rules. Concepts: selectors, properties, the box model, flexbox, and media queries (see pages 16–23). fileciteturn1file0</p>
+
+      <article>
+        <h3>Selectors</h3>
+        <p>Element selector (<code>p</code>), class selector (<code>.btn</code>), id selector (<code>#header</code>), universal (<code>*</code>).</p>
+      </article>
+
+      <article>
+        <h3>Box model</h3>
+        <p>Content → padding → border → margin. Use <code>box-sizing: border-box</code> to make sizing easier.</p>
+      </article>
+    </section>
+
+    <section id="js-fundamentals" class="card">
+      <h2>JavaScript Fundamentals</h2>
+      <p>JavaScript adds interactivity. Key concepts: variables (<code>let</code>, <code>const</code>), types, functions, the DOM, events and control flow (if/else, loops). (See pages 26–34.) fileciteturn1file0</p>
+
+      <article>
+        <h3>DOM & Events</h3>
+        <p>Use <code>document.querySelector</code> and <code>addEventListener</code> to react to user input.</p>
+      </article>
+    </section>
+
+    <section id="examples" class="card">
+      <h2>Interactive Examples</h2>
+
+      <div class="example-grid">
+
+        <div class="example">
+          <h3>Profile Card (HTML + CSS)</h3>
+          <div class="profile-card" id="profileCard">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/User-avatar.svg" alt="avatar" class="avatar">
+            <h4>Jane Doe</h4>
+            <p class="muted">Front-end Developer</p>
+            <a href="#" class="btn" id="contactBtn">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="example">
+          <h3>Table Example</h3>
+          <table class="demo-table">
+            <thead><tr><th>Name</th><th>Role</th></tr></thead>
+            <tbody>
+              <tr><td>Alice</td><td>Developer</td></tr>
+              <tr><td>Bob</td><td>Designer</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="example">
+          <h3>Simple Form (Validation)</h3>
+          <form id="simpleForm" class="simple-form" novalidate>
+            <label for="email">Email</label>
+            <input id="email" type="email" required placeholder="you@example.com">
+            <label for="pass">Password</label>
+            <input id="pass" type="password" minlength="6" required placeholder="6+ characters">
+            <div class="form-actions">
+              <button type="submit" class="btn">Submit</button>
+              <button type="reset" class="btn secondary">Reset</button>
+            </div>
+            <div id="formMsg" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <div class="example">
+          <h3>Counter App (JS demo)</h3>
+          <div class="counter">
+            <div class="count" id="count">0</div>
+            <div class="counter-controls">
+              <button class="btn" id="dec">-</button>
+              <button class="btn" id="inc">+</button>
+              <button class="btn secondary" id="reset">Reset</button>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- example-grid -->
+    </section>
+
+    <section class="card">
+      <h2>Try it yourself</h2>
+      <p>Open <code>index.html</code> and edit the HTML, CSS or JavaScript files to experiment. The files are linked below.</p>
+      <ul>
+        <li><a href="css/style.css" download>css/style.css</a></li>
+        <li><a href="js/app.js" download>js/app.js</a></li>
+        <li><a href="index.html" download>index.html</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <p>Learn-by-example project — examples reflect topics in the uploaded PDF. fileciteturn1file0</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

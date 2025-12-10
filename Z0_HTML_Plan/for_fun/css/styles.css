@@ -1,0 +1,217 @@
+/* Joyful, colourful, modern CSS for your registration form */
+
+:root{
+  --bg: #fdf8ff;                  /* pastel lilac */
+  --card: #ffffff;
+  --accent: #ff6ec7;              /* bright pink */
+  --accent2: #6a5cff;             /* violet-blue */
+  --accent3: #38d9a9;             /* mint green */
+  --text-dark: #2d2d2d;
+  --muted: #6f6f6f;
+  --danger: #ff3b3b;
+  --radius: 12px;
+  --maxw: 760px;
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+*{box-sizing:border-box;}
+html,body{
+  margin:0;
+  height:100%;
+  background: var(--bg);
+  color: var(--text-dark);
+}
+
+/* Container */
+.container{
+  max-width:var(--maxw);
+  margin:50px auto;
+  padding:20px;
+}
+
+/* Hero header with vibrant gradient */
+.hero{
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 60%, var(--accent3) 100%);
+  padding:25px;
+  border-radius: var(--radius);
+  color:white;
+  text-shadow:0 2px 5px rgba(0,0,0,0.2);
+  margin-bottom:25px;
+  animation: floatIn 0.7s ease;
+}
+
+.hero h1{
+  margin:0;
+  font-size:1.8rem;
+  font-weight:600;
+}
+
+.lead{
+  margin-top:8px;
+  font-size:1rem;
+  opacity:0.95;
+}
+
+/* Card-like form */
+form{
+  background:var(--card);
+  padding:25px;
+  border-radius:var(--radius);
+  box-shadow:0 8px 20px rgba(146, 118, 255, 0.15);
+  animation: fadeIn 0.8s ease;
+}
+
+/* Fieldsets */
+fieldset{
+  border:0;
+  margin-bottom:22px;
+}
+
+legend{
+  font-weight:600;
+  font-size:1.1rem;
+  margin-bottom:10px;
+  color: var(--accent2);
+}
+
+/* Labels & inputs */
+label{
+  display:block;
+  margin:14px 0 6px;
+  font-size:0.95rem;
+  font-weight:500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea{
+  width:100%;
+  padding:12px 14px;
+  border:2px solid #e6d7ff;
+  border-radius:10px;
+  font-size:0.95rem;
+  transition:0.25s ease;
+  background:#faf7ff;
+}
+
+input:focus, select:focus, textarea:focus{
+  border-color:var(--accent2);
+  box-shadow:0 0 10px rgba(106, 92, 255, 0.4);
+  background:white;
+}
+
+/* Hints */
+.hint{
+  font-size:0.82rem;
+  color:var(--muted);
+  margin-top:5px;
+}
+
+.req{
+  color:var(--danger);
+  font-weight:700;
+}
+
+/* Checkbox row */
+.checkbox-row{
+  display:flex;
+  gap:10px;
+  margin:12px 0 20px;
+}
+
+.checkbox-row label{
+  margin:0;
+  font-weight:500;
+}
+
+/* Buttons */
+button{
+  padding:12px 20px;
+  border-radius:10px;
+  font-size:0.95rem;
+  font-weight:600;
+  border:none;
+  cursor:pointer;
+  transition:0.25s ease;
+}
+
+button[type="submit"]{
+  background:var(--accent2);
+  color:white;
+  box-shadow:0 4px 12px rgba(106,92,255,0.32);
+}
+
+button[type="submit"]:hover{
+  background:#5748ff;
+  transform:translateY(-2px);
+}
+
+button.secondary{
+  background:white;
+  border:2px solid #dcd0ff;
+}
+
+button.secondary:hover{
+  background:#f3ebff;
+}
+
+/* Messages */
+.msg{
+  margin-top:15px;
+  padding:12px;
+  border-radius:10px;
+  font-weight:500;
+  animation: fadeIn 0.4s ease;
+}
+
+.msg.success{
+  background:#e9fff7;
+  border-left:5px solid var(--accent3);
+  color:#087f5b;
+}
+
+.msg.error{
+  background:#ffecec;
+  border-left:5px solid var(--danger);
+  color:#a60000;
+}
+
+/* Responsive grid */
+@media (min-width:760px){
+  fieldset{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+  }
+  legend{
+    grid-column:1/-1;
+  }
+  .hint{
+    grid-column:1/-1;
+  }
+  .form-actions{
+    justify-content:flex-end;
+  }
+}
+
+/* Buttons row */
+.form-actions{
+  display:flex;
+  gap:12px;
+  margin-top:12px;
+}
+
+/* Animations */
+@keyframes fadeIn{
+  from { opacity:0; transform:translateY(10px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+@keyframes floatIn{
+  from { opacity:0; transform:scale(0.95); }
+  to   { opacity:1; transform:scale(1); }
+}

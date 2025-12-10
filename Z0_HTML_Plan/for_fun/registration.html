@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ML Workshop — Registration</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <h1>Machine Learning Workshop — Registration</h1>
+        <p class="lead">Sign up to reserve your seat. Fields marked <span aria-hidden="true">*</span> are required.</p>
+      </header>
+
+      <form id="regForm" novalidate>
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fullname">Full name <span class="req">*</span></label>
+          <input id="fullname" name="fullname" type="text" minlength="3" required aria-describedby="nameHelp" />
+
+          <div id="nameHelp" class="hint">Enter your first and last name.</div>
+
+          <label for="email">Email <span class="req">*</span></label>
+          <input id="email" name="email" type="email" required aria-describedby="emailHelp" />
+
+          <div id="emailHelp" class="hint">We'll use this to send confirmation and materials.</div>
+
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" pattern="\d{10}" placeholder="10 digits" aria-describedby="phoneHelp" />
+          <div id="phoneHelp" class="hint">Optional — digits only (10 digits).</div>
+
+          <label for="dob">Date of Birth</label>
+          <input id="dob" name="dob" type="date" />
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Account</legend>
+
+          <label for="password">Password <span class="req">*</span></label>
+          <input id="password" name="password" type="password" required minlength="8" aria-describedby="pwdHelp" />
+          <div id="pwdHelp" class="hint">At least 8 characters, mix of letters and numbers recommended.</div>
+
+          <label for="confirmPassword">Confirm Password <span class="req">*</span></label>
+          <input id="confirmPassword" name="confirmPassword" type="password" required />
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Workshop Details</legend>
+
+          <label for="track">Preferred Track <span class="req">*</span></label>
+          <select id="track" name="track" required>
+            <option value="">Choose a track</option>
+            <option value="intro">Introduction to ML</option>
+            <option value="supervised">Supervised Learning</option>
+            <option value="unsupervised">Unsupervised Learning</option>
+            <option value="practical">Practical Lab + Projects</option>
+          </select>
+
+          <label for="experience">Experience Level</label>
+          <select id="experience" name="experience">
+            <option value="none">No experience</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+
+          <label for="comments">Comments / Questions</label>
+          <textarea id="comments" name="comments" rows="4" maxlength="500" placeholder="Anything you'd like the instructors to know?"></textarea>
+
+        </fieldset>
+
+        <div class="checkbox-row">
+          <input id="terms" name="terms" type="checkbox" required />
+          <label for="terms">I agree to receive emails about the workshop (required).</label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="submitBtn">Register</button>
+          <button type="reset" class="secondary">Reset</button>
+        </div>
+
+        <div id="formMessage" role="status" aria-live="polite"></div>
+      </form>
+    </main>
+
+   <script src="js/script.js"></script>
+
+  </body>
+</html>

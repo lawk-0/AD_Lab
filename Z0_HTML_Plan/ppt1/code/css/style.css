@@ -1,0 +1,59 @@
+/* css/style.css — joyful teaching stylesheet */
+
+/* Base and layout */
+:root{
+  --bg:#fffdfa;
+  --card:#ffffff;
+  --accent:#6a5cff;
+  --accent2:#ff6ec7;
+  --muted:#6b6b6b;
+  --radius:12px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;}
+.wrap{max-width:1000px;margin:0 auto;padding:20px}
+
+/* Header */
+.site-hero{background:linear-gradient(90deg,var(--accent),var(--accent2));color:white;padding:26px 0;border-bottom-left-radius:18px;border-bottom-right-radius:18px}
+.site-hero .lead{opacity:0.95;margin-top:8px}
+.toc{margin-top:12px}
+.toc a{color:rgba(255,255,255,0.95);margin-right:12px;text-decoration:none;font-weight:600}
+
+/* Cards */
+.card{background:var(--card);padding:18px;margin:20px 0;border-radius:var(--radius);box-shadow:0 8px 24px rgba(100,80,180,0.08)}
+.content h2{margin-top:0}
+
+/* Example grid */
+.example-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.example{padding:12px;border-radius:10px;background:linear-gradient(180deg, #fff, #fbfbff);border:1px solid #f0eff8}
+
+/* Profile card */
+.profile-card{width:220px;padding:18px;text-align:center;border-radius:12px;background:linear-gradient(180deg,#ffffff,#f8f6ff);box-shadow:0 6px 18px rgba(106,92,255,0.08);margin:0 auto}
+.avatar{width:84px;height:84px;border-radius:50%;background:#eee;display:block;margin:0 auto 10px}
+.profile-card h4{margin:6px 0 0}
+.muted{color:var(--muted);font-size:0.9rem}
+
+/* Table */
+.demo-table{width:100%;border-collapse:collapse;margin-top:6px}
+.demo-table th, .demo-table td{padding:10px;border-bottom:1px solid #f0eef8;text-align:left}
+.demo-table thead th{background:linear-gradient(90deg, #f6f4ff, #fff);color:var(--muted)}
+
+/* Forms */
+.simple-form label{display:block;margin:10px 0 6px;font-weight:600}
+.simple-form input{width:100%;padding:10px;border-radius:8px;border:1px solid #eee;background:#fff}
+.form-actions{display:flex;gap:8px;margin-top:12px}
+.btn{background:var(--accent);color:white;padding:8px 12px;border-radius:8px;border:none;cursor:pointer;font-weight:700}
+.btn.secondary{background:white;color:var(--accent);border:2px solid #f0e8ff}
+
+/* Counter */
+.counter{text-align:center;padding:14px}
+.count{font-size:2rem;font-weight:700;margin-bottom:10px}
+
+/* Footer */
+.site-foot{padding:18px 0;color:var(--muted);text-align:center;font-size:0.95rem}
+
+/* Responsive tweaks */
+@media (min-width:760px){
+  .profile-card{margin-top:6px}
+}
